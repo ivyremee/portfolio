@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starting Salary Prediction | Ivy Remee's Portfolio</title>
+  <meta name="description" content="Python machine learning model that predicts graduate starting salaries with a 4.74% error rate.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="shortcut icon" href="../assets/favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/project.css">
+</head>
+<body id="top">
+
+  <header class="header">
+    <a class="header__logo" href="../index.html#home" aria-label="Ivy Remee, home">ir<span class="header__logo-dot">.</span></a>
+    <button class="header__toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+      <span class="header__toggle-bar header__toggle-bar--top"></span>
+      <span class="header__toggle-bar header__toggle-bar--bottom"></span>
+    </button>
+    <nav class="nav" id="primary-nav" aria-label="Primary navigation">
+      <a class="nav__link" href="../index.html#home">Hello</a>
+      <a class="nav__link" href="../index.html#about">About</a>
+      <a class="nav__link nav__link--active" href="../index.html#work" aria-current="page">Work</a>
+      <a class="nav__link" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="project">
+    <div class="page-shell">
+      <div class="project__inner">
+        <a class="project__back" href="../index.html#work"><span class="project__back-icon" aria-hidden="true">←</span> All projects</a>
+        <article class="case-study">
+          <header class="case-study__header">
+            <p class="kicker">Case study · Data &amp; Machine Learning</p>
+            <h1 class="case-study__title">Starting Salary Prediction Using Machine Learning</h1>
+            <p class="case-study__lead">Developed a machine learning model in Python to predict graduate starting salaries using academic performance, internships, certifications, networking ability, and field of study.</p>
+          </header>
+
+          <section class="case-study__columns">
+            <div>
+              <p class="case-study__label">What I did</p>
+              <ul class="case-study__checklist">
+                <li class="case-study__check">Prepared and cleaned graduate outcome data</li>
+                <li class="case-study__check">Engineered features for predictive modeling</li>
+                <li class="case-study__check">Encoded categorical variables</li>
+                <li class="case-study__check">Scaled features for consistent model inputs</li>
+                <li class="case-study__check">Built and evaluated a salary prediction model</li>
+                <li class="case-study__check">Improved performance through iterative preprocessing</li>
+              </ul>
+            </div>
+            <div>
+              <p class="case-study__label">Tools &amp; technologies</p>
+              <ul class="case-study__tags">
+                <li class="case-study__tag">Python</li>
+                <li class="case-study__tag">Machine Learning</li>
+                <li class="case-study__tag">Data Preprocessing</li>
+                <li class="case-study__tag">Feature Engineering</li>
+                <li class="case-study__tag">Categorical Encoding</li>
+                <li class="case-study__tag">Feature Scaling</li>
+                <li class="case-study__tag">Predictive Analytics</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="insights">
+            <p class="case-study__label">Analysis &amp; visuals</p>
+            <div class="insights__grid">
+              <article class="insight insight--visual insight--1">
+                <img class="insight__image" src="../assets/salary-correlation-heatmap.png" alt="Correlation heatmap comparing academic, professional, networking, and starting salary variables" loading="lazy">
+                <div class="insight__body">
+                  <span class="insight__num">01</span>
+                  <h3 class="insight__title">Correlation Heatmap</h3>
+                  <p class="insight__text">Analyzed relationships between academic, professional, and networking factors to identify the strongest predictors of starting salary before model development.</p>
+                  <code class="analysis-code">sns.heatmap(df.corr(), cmap=&#x27;coolwarm&#x27;)</code>
+                </div>
+              </article>
+              <article class="insight insight--visual insight--2">
+                <img class="insight__image" src="../assets/salary-actual-vs-predicted.png" alt="Scatter plot comparing actual and predicted graduate starting salaries" loading="lazy">
+                <div class="insight__body">
+                  <span class="insight__num">02</span>
+                  <h3 class="insight__title">Actual vs. Predicted Salary</h3>
+                  <p class="insight__text">Compared actual and predicted salaries to assess model performance. Predicted values closely followed actual outcomes, indicating strong predictive capability.</p>
+                  <code class="analysis-code">plt.scatter(y_test, predictions)</code>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="code-showcase">
+            <div class="code-showcase__heading">
+              <p class="kicker">Python in practice</p>
+              <h2>Data Preparation Code</h2>
+            </div>
+            <div class="code-showcase__grid">
+              <article class="code-showcase__item">
+                <span>01</span>
+                <h3>Feature engineering</h3>
+                <pre><code>df = pd.get_dummies(
+    df,
+    columns=[&#x27;Field_of_Study&#x27;],
+    drop_first=True,
+    dtype=int
+)</code></pre>
+                <p class="code-caption">Converted education majors into machine-learning-ready features using one-hot encoding while avoiding multicollinearity through drop_first=True.</p>
+              </article>
+              <article class="code-showcase__item">
+                <span>02</span>
+                <h3>Feature scaling</h3>
+                <pre><code>scaler = StandardScaler()
+
+x_train = scaler.fit_transform(x_train)
+x_test = scaler.transform(x_test)</code></pre>
+                <p class="code-caption">Standardized feature ranges across GPA, SAT scores, internships, certifications, and networking metrics to improve model performance. This contributed to reducing prediction error from 5.49% to 4.74%.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="salary-result-card">
+            <div>
+              <span>4.74%</span>
+              <small>final error rate</small>
+            </div>
+            <div class="salary-results-copy">
+              <p class="case-study__label">Key results</p>
+              <ul>
+                <li class="salary-results-copy__item">Built and evaluated four iterations of a linear regression model</li>
+                <li class="salary-results-copy__item">Engineered features through categorical encoding and dummy variables</li>
+                <li class="salary-results-copy__item">Improved model error rate from 5.49% to 4.74%</li>
+                <li class="salary-results-copy__item">Achieved approximately 94% prediction accuracy</li>
+                <li class="salary-results-copy__item">Demonstrated that academic achievement, internships, networking, and field of study can effectively predict starting salary</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="reflection">
+            <div class="reflection__item">
+              <p class="case-study__label">The challenge</p>
+              <p class="reflection__text">Building an accurate model required balancing simplicity and predictive performance. While the initial linear regression model performed well, additional experimentation was needed to determine which variables contributed meaningful predictive value. Feature selection, categorical encoding, and scaling were iteratively evaluated to improve accuracy while maintaining an interpretable model.</p>
+            </div>
+            <div class="reflection__item">
+              <p class="case-study__label">What I learned</p>
+              <p class="reflection__text">This project demonstrated the importance of data preprocessing in machine learning workflows. Through iterative model development, I learned how categorical variables, feature engineering, and normalization techniques influence predictive performance. The experience reinforced the value of validating assumptions, measuring model error, and continuously refining models based on data-driven results.</p>
+            </div>
+          </section>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="page-shell">
+      <p class="kicker kicker--light">03 / Say hello</p>
+      <h2 class="section-title section-title--footer">Have a question worth<br>digging into?</h2>
+      <a class="footer__contact" href="mailto:hello@averykim.dev">hello@averykim.dev <span class="footer__contact-icon" aria-hidden="true">↗</span></a>
+      <div class="footer__row">
+        <p>Data, code &amp; good questions.</p>
+        <div class="footer__links">
+          <a class="footer__link" href="https://www.linkedin.com/in/ivyremee/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="footer__link" href="https://www.youtube.com/@lycheeivvy" target="_blank" rel="noreferrer">YouTube</a>
+          <a class="footer__link" href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="footer__link" href="#top">Back to top ↑</a>
+        </div>
+        <span class="footer__copyright">© <span id="year">2026</span> Ivy Remee</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+  <script src="../js/cursor.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>California Wildfire Prediction | Ivy Remee's Portfolio</title>
+  <meta name="description" content="Machine-learning case study predicting California wildfire occurrence from weather and seasonality data.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="shortcut icon" href="../assets/favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/project.css">
+</head>
+<body id="top">
+
+  <header class="header">
+    <a class="header__logo" href="../index.html#home" aria-label="Ivy Remee, home">ir<span class="header__logo-dot">.</span></a>
+    <button class="header__toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+      <span class="header__toggle-bar header__toggle-bar--top"></span>
+      <span class="header__toggle-bar header__toggle-bar--bottom"></span>
+    </button>
+    <nav class="nav" id="primary-nav" aria-label="Primary navigation">
+      <a class="nav__link" href="../index.html#home">Hello</a>
+      <a class="nav__link" href="../index.html#about">About</a>
+      <a class="nav__link nav__link--active" href="../index.html#work" aria-current="page">Work</a>
+      <a class="nav__link" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="project">
+    <div class="page-shell">
+      <div class="project__inner">
+        <a class="project__back" href="../index.html#work"><span class="project__back-icon" aria-hidden="true">←</span> All projects</a>
+        <article class="case-study">
+          <header class="case-study__header">
+            <p class="kicker">Case study · Data &amp; Machine Learning</p>
+            <h1 class="case-study__title">California Wildfire Prediction Using Machine Learning</h1>
+            <p class="case-study__lead">Developed a machine learning solution to predict wildfire occurrence in California using historical weather and environmental data. The project explored how temperature, precipitation, wind conditions, and seasonal trends influence wildfire risk and compared multiple classification models to identify the most effective prediction approach.</p>
+          </header>
+
+          <section class="case-study__columns">
+            <div>
+              <p class="case-study__label">What I did</p>
+              <ul class="case-study__checklist">
+                <li class="case-study__check">Cleaned and prepared datasets for analysis</li>
+                <li class="case-study__check">Performed exploratory data analysis (EDA)</li>
+                <li class="case-study__check">Engineered predictive features</li>
+                <li class="case-study__check">Built and evaluated machine learning models</li>
+                <li class="case-study__check">Compared model performance using ROC/AUC metrics</li>
+                <li class="case-study__check">Presented findings and recommendations</li>
+              </ul>
+            </div>
+            <div>
+              <p class="case-study__label">Tools &amp; technologies</p>
+              <ul class="case-study__tags">
+                <li class="case-study__tag">R</li>
+                <li class="case-study__tag">Machine Learning</li>
+                <li class="case-study__tag">Data Visualization</li>
+                <li class="case-study__tag">Logistic Regression</li>
+                <li class="case-study__tag">k-Nearest Neighbors (k-NN)</li>
+                <li class="case-study__tag">Decision Trees</li>
+                <li class="case-study__tag">Naive Bayes</li>
+                <li class="case-study__tag">Predictive Analytics</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="insights">
+            <p class="case-study__label">Key insights</p>
+            <div class="insights__grid">
+              <article class="insight insight--visual insight--1">
+                <img class="insight__image" src="../assets/wildfire-season-chart.png" alt="Bar chart comparing fire and no-fire occurrence counts across seasons" loading="lazy">
+                <div class="insight__body">
+                  <span class="insight__num">01</span>
+                  <h3 class="insight__title">Seasonal Wildfire Trends</h3>
+                  <p class="insight__text">Wildfire activity was substantially higher during summer months than in other seasons. This observation suggested that seasonality was a critical predictor and should be incorporated into predictive models.</p>
+                </div>
+              </article>
+              <article class="insight insight--visual insight--2">
+                <img class="insight__image" src="../assets/wildfire-temperature-chart.png" alt="Box plots comparing maximum temperatures on fire and no-fire days" loading="lazy">
+                <div class="insight__body">
+                  <span class="insight__num">02</span>
+                  <h3 class="insight__title">Temperature’s Impact</h3>
+                  <p class="insight__text">Exploratory analysis revealed that wildfire events were associated with higher temperatures, indicating temperature as one of the strongest predictive variables in the dataset.</p>
+                </div>
+              </article>
+              <article class="insight insight--visual insight--3">
+                <img class="insight__image" src="../assets/wildfire-roc-comparison.png" alt="Combined ROC curves comparing logistic regression, k-nearest neighbors, decision tree, and Naive Bayes models" loading="lazy">
+                <div class="insight__body">
+                  <span class="insight__num">03</span>
+                  <h3 class="insight__title">Model Performance</h3>
+                  <p class="insight__text">Multiple classification models were evaluated using ROC/AUC metrics. Several approaches effectively predicted wildfire occurrence while offering different trade-offs between performance and interpretability.</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="outcomes">
+            <p class="case-study__label">Project outcomes</p>
+            <ul class="outcomes__list">
+                <li class="outcomes__item">Analyzed approximately 7,000 observations</li>
+                <li class="outcomes__item">Built and evaluated 4 machine learning models</li>
+                <li class="outcomes__item">Identified temperature, precipitation, wind speed, and seasonality as key indicators</li>
+                <li class="outcomes__item">Achieved strong predictive performance across all tested models</li>
+                <li class="outcomes__item">Generated actionable insights for wildfire risk assessment</li>
+            </ul>
+          </section>
+
+          <section class="reflection">
+            <div class="reflection__item">
+              <p class="case-study__label">The challenge</p>
+              <p class="reflection__text">One challenge was balancing model performance with interpretability. While some models provided marginally better predictive accuracy, others made it easier to understand which environmental factors contributed most strongly to wildfire occurrence. Evaluating these trade-offs was an important part of the analysis.</p>
+            </div>
+            <div class="reflection__item">
+              <p class="case-study__label">What I learned</p>
+              <p class="reflection__text">This project strengthened my skills in data cleaning, exploratory analysis, predictive modeling, and performance evaluation. It also reinforced the importance of combining statistical analysis with effective data storytelling for non-technical audiences.</p>
+            </div>
+          </section>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="page-shell">
+      <p class="kicker kicker--light">03 / Say hello</p>
+      <h2 class="section-title section-title--footer">Have a question worth<br>digging into?</h2>
+      <a class="footer__contact" href="mailto:hello@averykim.dev">hello@averykim.dev <span class="footer__contact-icon" aria-hidden="true">↗</span></a>
+      <div class="footer__row">
+        <p>Data, code &amp; good questions.</p>
+        <div class="footer__links">
+          <a class="footer__link" href="https://www.linkedin.com/in/ivyremee/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="footer__link" href="https://www.youtube.com/@lycheeivvy" target="_blank" rel="noreferrer">YouTube</a>
+          <a class="footer__link" href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="footer__link" href="#top">Back to top ↑</a>
+        </div>
+        <span class="footer__copyright">© <span id="year">2026</span> Ivy Remee</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+  <script src="../js/cursor.js" defer></script>
+</body>
+</html>
